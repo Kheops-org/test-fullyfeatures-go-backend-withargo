@@ -1,0 +1,27 @@
+
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: test-fullyfeatures-go-backend-withargo
+  description: test-fullyfeatures-go-backend-withargo
+  links:
+    - url: https://github.com/Kheops-org/test-fullyfeatures-go-backend-withargo
+      title: Source Code
+      icon: github
+    - url: https://argocd-server-sreez.apps.oc-med.wk.nt.local/applications/sreez/test-fullyfeatures-go-backend-withargo
+      title: ArgoCD Deployment
+      icon: cached
+    - url: http://localhost:8090
+      title: HyperDX Logs and Monitoring
+      icon: monitor_heart
+  tags:
+    - go
+    - sreez
+  annotations:
+    argocd/app-name: test-fullyfeatures-go-backend-withargo
+    backstage.io/kubernetes-id: test-fullyfeatures-go-backend-withargo
+spec:
+  type: api
+  system: system:default/examples
+  lifecycle: production
+  owner: user:default/jggc
